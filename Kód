@@ -1,0 +1,44 @@
+// program který vypíše čísla od 1 do 100 kromě čísel 40 a 60
+
+for (int i = 1; i <= 100; i++)
+{
+    if (i == 40 || i == 60)
+    {
+        continue;
+    }
+    Console.WriteLine(i);
+}
+
+// program který vykreslí odbedlník se znaků "*" 
+
+int x = 0;
+for ( x = 0; x < 8; x++)
+{
+    Console.Write("*");
+}
+Console.WriteLine("");
+for ( x = 0; x < 3; x++)
+{
+    Console.WriteLine("*      *");
+}
+for ( x = 0; x < 8; x++)
+{
+    Console.Write("*");
+}
+Console.WriteLine("");
+
+// program který vypíše počet zadaných čísel
+
+int pocet = 0;
+Console.WriteLine("Zadejte čísla ( x, y, z, .....)");
+string input = Console.ReadLine();
+string[] cisla = input.Split(',');
+foreach (string cislo in cisla)
+{
+    if(cisla == null)
+    {
+        break;
+    }
+    pocet++;
+}
+Console.WriteLine("počet zadaných čísel: " + pocet);
